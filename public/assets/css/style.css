@@ -1,0 +1,46 @@
+html{
+  scroll-behavior: smooth;
+}
+
+nav a {
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  nav a:hover,
+  .active {
+    border-bottom: 2px solid var(--green-light);
+  }
+
+  .mobile-nav {
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .contact-btn {
+    border-color: var(--green-light);
+    transition: all 0.3s;
+  }
+
+  .contact-btn:hover {
+    color: var(--green-light);
+  }
+
+  /* Hero Section */
+
+  .get-btn{
+    background-color: var(--blue-light);
+    transition: all 0.3s;
+  }
+
+  .get-btn:hover{
+    background-color: #1a2676;
+  }
+
+  .video-btn{
+    border-color: var(--green-light);
+    transition: all 0.3s;
+  }
+
+  .video-btn:hover{
+    background-color: var(--green-light);
+  }
