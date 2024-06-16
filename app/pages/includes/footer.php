@@ -43,6 +43,15 @@
   <script src="<?=ROOT?>/assets/js/script.js"></script>
   <script src="<?=ROOT?>/assets/js/jquery.js"></script>
   <script src="<?=ROOT?>/assets/js/dashboard.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  let dropdown = document.querySelector('.dropdown-toggle');
+  let dropdown_ul = document.querySelector('.dropdown-toggle + ul');
+  dropdown.addEventListener('click',()=>{
+   dropdown_ul.classList.toggle('hidden');
+  })
+});
+</script>
 
   
   </body>

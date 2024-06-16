@@ -1,18 +1,18 @@
-<div class="col-md-6">
-  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-    <div class="col p-4 d-flex flex-column position-static">
-      <strong class="d-inline-block mb-2 text-primary"><?=esc($row['category'] ?? 'Unknown')?></strong>
+<div class="col-span-6 px-4 " >
+  <a href="<?=ROOT?>/post/<?=$row['slug']?>">
+  <div class="bg-white border rounded-lg overflow-hidden flex flex-col mb-4 shadow-sm h-96">
+    <div class="md:w-7/12">
+      <img class="w-full object-cover object-center" style="height: <?php echo $post_image_size ?>;" src="<?=get_image($row['image'])?>" alt="<?=esc($row['title'])?>">
+    </div>
+    <div class="p-4 flex flex-col justify-between text-center">
+      <strong class="text-primary mb-2"><?=esc($row['category'] ?? 'Unknown')?></strong>
       
-      <a href="<?=ROOT?>/post/<?=$row['slug']?>">
+      <a href="<?=ROOT?>/post/<?=$row['slug']?>" class="mb-2">
         <h3 class="mb-0"><?=esc($row['title'])?></h3>
       </a>
-      <div class="mb-1 text-muted"><?=date("jS M, Y",strtotime($row['date']))?></div>
-      <a href="<?=ROOT?>/post/<?=$row['slug']?>" class="stretched-link">Continue reading..</a>
-    </div>
-    <div class="col-lg-5 col-12 d-lg-block">
-      <a href="<?=ROOT?>/post/<?=$row['slug']?>">
-        <img class="bd-placeholder-img w-100" width="200" height="250" style="object-fit:cover;" src="<?=get_image($row['image'])?>">
-      </a>
+      <div class="text-sm text-muted"><?=date("jS M, Y", strtotime($row['date']))?></div>
+      <a href="<?=ROOT?>/post/<?=$row['slug']?>" class="mt-auto text-blue-500">Continue reading..</a>
     </div>
   </div>
+</a>
 </div>
